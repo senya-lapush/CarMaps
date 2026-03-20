@@ -1,6 +1,8 @@
 package com.example.carmaps
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.google.android.gms.maps.model.CameraPosition
@@ -12,6 +14,7 @@ import com.google.maps.android.compose.rememberCameraPositionState
 
 @Composable
 fun MapComponent(
+    paddings: PaddingValues,
     lat: Double,
     lon: Double
 ) {
@@ -23,7 +26,7 @@ fun MapComponent(
     }
 
     GoogleMap(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().padding(paddings),
         cameraPositionState = cameraPositionState
     ) {
         Marker(

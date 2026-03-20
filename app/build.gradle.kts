@@ -71,5 +71,4 @@ dependencies {
     "gmsImplementation" (libs.google.maps.compose)
     "gmsImplementation" (libs.google.gms)
     "hmsImplementation" (libs.maplibre.compose)
-    "hmsImplementation" (libs.maplibre.android.sdk)
 }
